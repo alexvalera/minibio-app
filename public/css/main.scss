@@ -1,0 +1,115 @@
+$brand-color: #ec008c;
+$light-gray: #eee; 
+$mobile-breakpoint: 768px; 
+$desktop-breakpoint: 1024px;
+@mixin width-more-than($width) {
+  @media (min-width: #{$width}) {
+    @content;
+  }
+}
+* {
+
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  margin: 0; 
+  padding: 0; 
+}
+
+.homepage {
+  height: 100vh; 
+  overflow: hidden;
+}
+
+.main-nav {
+  position: fixed; 
+  top: 20px;
+  right: 20px; 
+  left: 20px; 
+}
+.main-nav .logo{
+  margin-top: 0;
+  margin-bottom: 0; 
+  font-size: 16px; 
+  color: black;
+}
+
+.main-nav .nav-item-container {
+  position: relative; 
+}
+
+.main-nav .logo-container {
+  position: absolute;
+  left: 0; 
+}
+
+.main-grid {
+  height: calc(100vh - 50px); 
+  margin-top: 50px; 
+  .row {
+    margin: 0px 20px; 
+  }
+}
+.sign-in-container {
+  position: absolute; 
+  right: 0; 
+}
+.sign-in-btn {
+  padding: 10px; 
+  border: 1px solid #cecece; 
+  border-radius: 5px; 
+  font-size: 14px; 
+  color: #797979;
+}
+
+
+.hero-text {
+   margin-top: 135px;
+  .hero-text__subtitle {
+    display: inline-block;
+    position: relative;
+    margin: 0; 
+    font-weight: 400;
+    font-size: 28px; 
+    color: black;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 5px; /* ADJUST HEIGHT TO ADD WEIGHT */
+      background: #FC354C;
+    }
+  }
+  .hero-text__title {
+    margin: 0; 
+    font-size: 36px; 
+    color: black;
+  }
+  .hero-text__cta-container {
+    margin-top: 35px;
+    text-align: center;
+  }
+  .hero-text__cta {
+      padding: 15px 35px;
+      font-size: 16px;
+      /* Rectangle: */
+      background-image: -webkit-linear-gradient(143deg, #FE6583 3%, #FC354C 100%);
+      background-image: -moz-linear-gradient(143deg, #FE6583 3%, #FC354C 100%);
+      background-image: -o-linear-gradient(143deg, #FE6583 3%, #FC354C 100%);
+      background-image: linear-gradient(233deg, #FE6583 3%, #FC354C 100%);
+      border-radius: 10px; 
+      color: white;
+    }
+
+    .hero-text__img{
+      display: block;
+      text-align: center;
+      margin-top: 50px; 
+      img {
+        width: 250px; 
+      }
+    }
+}
