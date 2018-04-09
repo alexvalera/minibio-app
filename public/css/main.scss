@@ -15,6 +15,8 @@ $desktop-breakpoint: 1024px;
 body {
   margin: 0; 
   padding: 0; 
+  height: 100vh; 
+  overflow: hidden;
 }
 
 .homepage {
@@ -61,6 +63,7 @@ body {
   border-radius: 5px; 
   font-size: 14px; 
   color: #797979;
+  text-transform: uppercase;
 }
 
 
@@ -73,6 +76,8 @@ body {
     font-weight: 400;
     font-size: 28px; 
     color: black;
+  }
+  .hero-text__subtitle.hero-text__subtitle--strike {
     &:before {
       content: "";
       position: absolute;
@@ -94,6 +99,7 @@ body {
   }
   .hero-text__cta {
       padding: 15px 35px;
+      text-transform: uppercase;
       font-size: 16px;
       /* Rectangle: */
       background-image: -webkit-linear-gradient(143deg, #FE6583 3%, #FC354C 100%);
@@ -112,4 +118,55 @@ body {
         width: 250px; 
       }
     }
+}
+
+.sign-up {
+  .sign-up__header {
+    margin-top: 65px;
+  }
+  .sign-up__header .sign-up__header-text-container{
+    width: 80%; 
+    margin: 0 auto; 
+  }
+  .sign-up__header-subtitle{
+    margin: 0; 
+    font-size: 18px; 
+  }
+  .sign-up__header-title {
+    margin: 0; 
+    font-size: 28px; 
+  }
+  .sign-up__form {
+    margin-top: 100px;
+  }
+  div {
+    margin: 20px 0;
+  }
+  input {
+    width: 90%;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+    border: 1px solid #cecece;
+    border-radius: 10px; 
+    font-size: 16px;
+  }
+
+  .sign-up__create-account-btn {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    /* Rectangle: */
+    background-image: -webkit-linear-gradient(143deg, #FE6583 3%, #FC354C 100%);
+    background-image: -moz-linear-gradient(143deg, #FE6583 3%, #FC354C 100%);
+    background-image: -o-linear-gradient(143deg, #FE6583 3%, #FC354C 100%);
+    background-image: linear-gradient(233deg, #FE6583 3%, #FC354C 100%);
+    color: white;
+    padding: 20px 0;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
 }
