@@ -19,28 +19,42 @@
           <div class = "sign-up__header-text-container">
             <h1 class = "sign-up__header-subtitle">Today's the day</h1>
             <h1 class = "sign-up__header-title">Create a minibio</h1>
-          <form class = "sign-up__form">
+            <hr></hr>
+          <form class = "sign-up__form" id ="create-account">
             <div>
+              <input name = "name" type = "text" placeholder = "name" v-model= "name"/>
               <label>name</label>
-              <input name = "name" type = "email"/>
             </div>
             <div>
+              <input name = "email" type = "email" placeholder = "email" v-model= "email"/>
               <label>email</label>
-              <input name = "email" type = "email"/>
             </div>
             <div>
+              <input name = "password" type = "password" placeholder = "password" v-model= "password"/>
               <label>password</label>
-              <input name = "password" type = "password"/>
             </div>
-
+            <button class = "sign-up__create-account-btn" v-on:click="createAccountSubmit">Create Account</button>
           </form>
           </div>   
         </header>
-        <section>
-          <button class = "sign-up__create-account-btn">Create Account</button>
-        </section>
       </div>
     </section>
-    <script src="js/main.js"></script>
+    <section class = "loading-overlay">
+    </section>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC5uIfbHh1SIbBBYHq8KOqfuipLZVnjBdc",
+    authDomain: "minibio-dccb1.firebaseapp.com",
+    databaseURL: "https://minibio-dccb1.firebaseio.com",
+    projectId: "minibio-dccb1",
+    storageBucket: "minibio-dccb1.appspot.com",
+    messagingSenderId: "269208056950"
+  };
+  firebase.initializeApp(config);
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="js/createAccount.js"></script>
     </body>
 </html>

@@ -1,5 +1,6 @@
 * {
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Lato', sans-serif;
+  transition: all 0.3s ease; }
 
 body {
   margin: 0;
@@ -91,43 +92,79 @@ body {
     .hero-text .hero-text__img img {
       width: 250px; }
 
-.sign-up .sign-up__header {
-  margin-top: 65px; }
-.sign-up .sign-up__header .sign-up__header-text-container {
-  width: 80%;
-  margin: 0 auto; }
-.sign-up .sign-up__header-subtitle {
-  margin: 0;
-  font-size: 18px; }
-.sign-up .sign-up__header-title {
-  margin: 0;
-  font-size: 28px; }
-.sign-up .sign-up__form {
-  margin-top: 100px; }
-.sign-up div {
-  margin: 20px 0; }
-.sign-up input {
-  width: 90%;
-  margin-top: 10px;
-  padding: 10px;
-  display: block;
-  border: 1px solid #cecece;
-  border-radius: 10px;
-  font-size: 16px; }
-.sign-up .sign-up__create-account-btn {
+.sign-up {
+  /* FF 4-18 */
+  /* FF 19+ */
+  /* IE 10+ */ }
+  .sign-up .sign-up__header {
+    margin-top: 65px; }
+  .sign-up .sign-up__header .sign-up__header-text-container {
+    width: 80%;
+    margin: 0 auto; }
+  .sign-up .sign-up__header-subtitle {
+    margin: 0;
+    font-size: 18px; }
+  .sign-up .sign-up__header-title {
+    margin: 0;
+    font-size: 28px;
+    color: #FC354C; }
+  .sign-up .sign-up__form {
+    margin-top: 40px; }
+  .sign-up hr {
+    margin-top: 20px;
+    width: 30px; }
+  .sign-up div {
+    position: relative;
+    margin: 40px 0; }
+  .sign-up input {
+    width: 90%;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+    font-size: 16px; }
+    .sign-up input:focus ~ label {
+      top: -20px; }
+  .sign-up input:focus::-webkit-input-placeholder {
+    color: transparent; }
+  .sign-up input:focus:-moz-placeholder {
+    color: transparent; }
+  .sign-up input:focus::-moz-placeholder {
+    color: transparent; }
+  .sign-up input:focus:-ms-input-placeholder {
+    color: transparent; }
+  .sign-up label {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    font-size: 14px;
+    color: black; }
+  .sign-up .sign-up__create-account-btn {
+    width: 100%;
+    /* Rectangle: */
+    background-image: -webkit-linear-gradient(143deg, #FE6583 3%, #FC354C 100%);
+    background-image: -moz-linear-gradient(143deg, #FE6583 3%, #FC354C 100%);
+    background-image: -o-linear-gradient(143deg, #FE6583 3%, #FC354C 100%);
+    background-image: linear-gradient(233deg, #FE6583 3%, #FC354C 100%);
+    color: white;
+    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase; }
+
+.loading-overlay {
   position: fixed;
-  bottom: 0;
-  width: 100%;
-  left: 0;
-  right: 0;
-  /* Rectangle: */
+  top: 100%;
+  height: 100vh;
+  width: 100vw;
   background-image: -webkit-linear-gradient(143deg, #FE6583 3%, #FC354C 100%);
   background-image: -moz-linear-gradient(143deg, #FE6583 3%, #FC354C 100%);
   background-image: -o-linear-gradient(143deg, #FE6583 3%, #FC354C 100%);
   background-image: linear-gradient(233deg, #FE6583 3%, #FC354C 100%);
-  color: white;
-  padding: 20px 0;
-  font-size: 16px;
-  text-transform: uppercase; }
+  transition: all 0.5s ease-out; }
+
+.form-submitted .loading-overlay {
+  top: 0%; }
 
 /*# sourceMappingURL=main.css.map */
